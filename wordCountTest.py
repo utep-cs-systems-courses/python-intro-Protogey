@@ -51,7 +51,7 @@ with open(inputFname, 'r') as inputFile:
         # split line on whitespace and punctuation
         word = re.split('[ \t]', line)
         if len(word) != 2:
-            print ("Badly formatted line, exiting. Bad line:\n %s" % line)
+            print ("Input: Badly formatted line, exiting. Bad line:\n %s" % line)
             exit()
         master[word[0]] = int(word[1])
         words += 1
@@ -64,7 +64,7 @@ with open(outputFname, 'r') as outputFile:
         # split line on whitespace and punctuation
         word = re.split('[ \t]', line)
         if len(word) != 2:
-            print ("Badly formatted line, exiting. Bad line:\n %s" % line)
+            print ("Output: Badly formatted line, exiting. Bad line:\n %s" % line)
             exit()
         if word[0] <= lastWord:
             print ("Misordered words: %s appears before %s" % (lastWord, word[0]))
